@@ -1,0 +1,52 @@
+//Vars
+
+$black: #000000;
+$white:#FFFFFF;
+$lightGrey:#D3D3D3;
+$darkGrey:#696969;
+$red:#B22222;
+
+
+//mixins
+
+@mixin translateY($e){
+  -webkit-transform: translateY($e);
+  -moz-transform: translateY($e);
+  transform: translateY($e);
+}
+
+@mixin transition($e){
+  -webkit-transition: $e;
+  -moz-transition: $e;
+  transition: $e;
+}
+
+//fonts
+
+
+body {
+  font-family: 'Bellefair', serif;
+  font-size: 25px;
+  color: $black;
+  font-weight: 400;
+  font-style: normal;
+  margin-bottom: 140px;
+}
+
+
+a{
+  text-decoration: none;
+  @include transition(.4s ease-in-out);
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: none;
+    color: $red;
+    @include transition(.4s ease-in-out);
+  }
+
+}
+
+.containter-fluid{
+  line-height: 50px;
+}
