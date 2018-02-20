@@ -11,7 +11,7 @@ class Products extends Component {
 
       <p>
           <button type="button" name="Design" width="200" onclick="show()"> More Details</button>
-          <img src="/images/Designed1.jpg" alt="Design number 1" height="500" width="500"></img>
+          <img src="Designed1.jpg" alt="Design number 1" height="500" width="500"></img>
       </p>
           <script>
             function show(){
