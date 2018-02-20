@@ -1,53 +1,98 @@
 import React, { Component } from 'react';
 import {
-  Link
+  Link,
+  withRouter,
 } from 'react-router-dom';
+import { auth } from '../../firebase';
+import { SignUpLink } from './SignUp';
+import * as routes from '../../constants/routes';
 
-class Login extends Component {
-  render() {
-    return (
-      <div className="container-fluid">
+const SignInPage = ({ history }) =>
+  <div>
+    <hi> SignIn</hi>
+    <SignInForm history ={history} />
+    <SignUpLink />
+  </div>
 
-      <h1>
-        Welcome to the Login!
-      </h1>
-      <p>
-        email address::::::::::      
-      </p>
-      <p>
-        pasword::::::::      
-      </p>
-      <p>
-        Login button
-      </p>
-      <p>
-        forgot pasword button -> link to forgot password      
-      </p>
+  const byPropKey = (propertyName, value) => () => ({
+    [propertyName]: value,
+  });
 
-      <Link to="/Login/SignUp">Sign Up</Link> 
+  const INITIAL_STATE = {
+    email: '',
+    password: '',
+    error: null,
+  };
 
+  class SignInForm extends Component {
+    constructor(props) {
+      super(props);
+
+      this.state = { ...INITIAL_STATE };
+    }
+
+    onSubmit = (event) => { 
+      const {
+        email,
+        password,
+      } = this.state;
+
+      const { 
+        history,
+      } = this.props;
+
+      auth.doSignInWithEmailAndPassword(email, password)
+        .then(() => {
+          this.setState(() => ({ ...INITIAL_STATE }));
+          history.push(routes.HOME);
+        })        
+        .catch(error => {
+          this.setState(byPropKey('error', error));
+        });
+      event.preventDefault();
+
+      <div>
+        <Link to="/Login/SignUp">Sign Up</Link>
       </div>
+  } // fomd tjosgjagjadk;gjadsl;kjgads;lkjgad;lkgjad;lkjgad;skljga;lkj
+
+  render() { 
+    const {
+      email,
+      password,
+      error,
+    } = this.state;
+
+    const isInvalid = 
+    password === '' || 
+    email === '';
+
+    return (
+      <form onSubmit={this.onSubmit}>
+        <input
+          value={email}
+          onChange={event => this.setState(byPropKey('email', event.target.value))}
+          type="text"
+          placeholder="Email Address"
+        />
+
+        <input
+          value={password}
+          onChange={event => this.setState(byPropKey('password', event.target.value))}
+          type="password"
+          placeholder="Password"
+        />
+        <button disabled={isInvalid} type="submit">
+          Sign In
+        </button>
+
+        { error && <p>{error.messge}</p>}
+      </form>
+    
 
     );
   }
+
 }
 
-export default Login;
-
-/*
-this is where im keeping this for now.
-its all the sexy firebase stuff
-<script src="https://www.gstatic.com/firebasejs/4.10.0/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyD8uoLEajmdN8rw8EDoIKggOHSDAJg8YXg",
-    authDomain: "printer-1c171.firebaseapp.com",
-    databaseURL: "https://printer-1c171.firebaseio.com",
-    projectId: "printer-1c171",
-    storageBucket: "printer-1c171.appspot.com",
-    messagingSenderId: "198617925096"
-  };
-  firebase.initializeApp(config);
-</script>
-*/
+export default SignInForm
