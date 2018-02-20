@@ -14,6 +14,8 @@ import Header from './components/headerComponent/header';
 import Footer from './components/footerComponent/footer';
 import Homepage from './components/pages/homePage';
 import Products from './components/pages/products';
+import Login from './components/pages/Login';
+import SignUp from './components/pages/SignUp';
 //import Time from './components/headerComponent/time';
 
 class App extends Component {
@@ -26,7 +28,8 @@ class App extends Component {
 
             <Route exact path='/' component={Homepage} />
             <Route exact path='/Products' component={Products} />
-
+            <Route exact path='/Login' component={Login} />
+            <Route exact path='/Login/SignUp' component={SignUp}/>
           <Footer/>
         </div>
       </div>
