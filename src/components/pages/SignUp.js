@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 import { Link,
          withRouter,
 } from 'react-router-dom'; // todo: where go after sign up
-import { auth } from '../../firebase/firebase';
+import { auth } from '../../firebase/';
 import * as routes from '../../constants/routes';
 
 
@@ -117,7 +117,7 @@ const SignUpLink = () =>
   <p>
     Don't have an account?
       {' '}
-      <Link to="/Login/SignUp">Sign Up</Link> 
+      <Link to="/SignIn/SignUp">Sign Up</Link> 
   </p>
 
 export default withRouter(SignUpPage);

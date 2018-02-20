@@ -1,42 +1,42 @@
-[debug] [2018-02-12T03:53:41.991Z] ----------------------------------------------------------------------
-[debug] [2018-02-12T03:53:41.994Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
-[debug] [2018-02-12T03:53:41.994Z] CLI Version:   3.17.4
-[debug] [2018-02-12T03:53:41.995Z] Platform:      darwin
-[debug] [2018-02-12T03:53:41.995Z] Node Version:  v8.6.0
-[debug] [2018-02-12T03:53:41.995Z] Time:          Sun Feb 11 2018 19:53:41 GMT-0800 (PST)
-[debug] [2018-02-12T03:53:41.995Z] ----------------------------------------------------------------------
+[debug] [2018-02-20T07:43:37.094Z] ----------------------------------------------------------------------
+[debug] [2018-02-20T07:43:37.097Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2018-02-20T07:43:37.097Z] CLI Version:   3.17.4
+[debug] [2018-02-20T07:43:37.097Z] Platform:      darwin
+[debug] [2018-02-20T07:43:37.097Z] Node Version:  v8.6.0
+[debug] [2018-02-20T07:43:37.097Z] Time:          Mon Feb 19 2018 23:43:37 GMT-0800 (PST)
+[debug] [2018-02-20T07:43:37.097Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2018-02-12T03:53:42.007Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2018-02-12T03:53:42.007Z] > authorizing via signed-in user
-[debug] [2018-02-12T03:53:42.009Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
-[debug] [2018-02-12T03:53:42.010Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+[debug] [2018-02-20T07:43:37.108Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-02-20T07:43:37.108Z] > authorizing via signed-in user
+[debug] [2018-02-20T07:43:37.110Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-02-20T07:43:37.110Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
  { refresh_token: '1/C_LSk6IdII3TEsq_7RN67wEhlWaaractbiguuqiCL_I',
   client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
   client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
   grant_type: 'refresh_token',
   scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
- Sun Feb 11 2018 19:53:42 GMT-0800 (PST)
-[debug] [2018-02-12T03:53:42.170Z] <<< HTTP RESPONSE 200
-[debug] [2018-02-12T03:53:42.181Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/printer-1c171  
+ Mon Feb 19 2018 23:43:37 GMT-0800 (PST)
+[debug] [2018-02-20T07:43:37.318Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-20T07:43:37.342Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/printer-1c171  
   
- Sun Feb 11 2018 19:53:42 GMT-0800 (PST)
-[debug] [2018-02-12T03:53:42.499Z] <<< HTTP RESPONSE 200
-[debug] [2018-02-12T03:53:42.499Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/printer-1c171/tokens  
+ Mon Feb 19 2018 23:43:37 GMT-0800 (PST)
+[debug] [2018-02-20T07:43:37.815Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-20T07:43:37.816Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/printer-1c171/tokens  
   
- Sun Feb 11 2018 19:53:42 GMT-0800 (PST)
-[debug] [2018-02-12T03:53:42.937Z] <<< HTTP RESPONSE 200
+ Mon Feb 19 2018 23:43:37 GMT-0800 (PST)
+[debug] [2018-02-20T07:43:38.508Z] <<< HTTP RESPONSE 200
 [info] 
 [info] === Serving from '/Users/kevincrum/Desktop/116/3d-print/src'...
 [info] 
-[debug] [2018-02-12T03:53:42.940Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/printer-1c171  
+[debug] [2018-02-20T07:43:38.510Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/printer-1c171  
   
- Sun Feb 11 2018 19:53:42 GMT-0800 (PST)
-[debug] [2018-02-12T03:53:43.447Z] <<< HTTP RESPONSE 200
-[debug] [2018-02-12T03:53:43.448Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/198617925096/clients/_:getWebAppConfig  
+ Mon Feb 19 2018 23:43:38 GMT-0800 (PST)
+[debug] [2018-02-20T07:43:39.123Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-20T07:43:39.124Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/198617925096/clients/_:getWebAppConfig  
   
- Sun Feb 11 2018 19:53:43 GMT-0800 (PST)
-[debug] [2018-02-12T03:53:44.023Z] <<< HTTP RESPONSE 200
-[debug] [2018-02-12T03:53:44.062Z] TypeError: Cannot read property 'public' of undefined
+ Mon Feb 19 2018 23:43:39 GMT-0800 (PST)
+[debug] [2018-02-20T07:43:39.942Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-20T07:43:39.957Z] TypeError: Cannot read property 'public' of undefined
     at Server.<anonymous> (/usr/local/lib/node_modules/firebase-tools/lib/serve/hosting.js:34:17)
     at Object.onceWrapper (events.js:314:30)
     at emitNone (events.js:105:13)
@@ -46,36 +46,36 @@
     at process._tickDomainCallback (internal/process/next_tick.js:218:9)
 [error] 
 [error] Error: An unexpected error has occurred.
-[debug] [2018-02-12T03:56:20.807Z] ----------------------------------------------------------------------
-[debug] [2018-02-12T03:56:20.810Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
-[debug] [2018-02-12T03:56:20.810Z] CLI Version:   3.17.4
-[debug] [2018-02-12T03:56:20.810Z] Platform:      darwin
-[debug] [2018-02-12T03:56:20.810Z] Node Version:  v8.6.0
-[debug] [2018-02-12T03:56:20.810Z] Time:          Sun Feb 11 2018 19:56:20 GMT-0800 (PST)
-[debug] [2018-02-12T03:56:20.810Z] ----------------------------------------------------------------------
+[debug] [2018-02-20T07:44:54.415Z] ----------------------------------------------------------------------
+[debug] [2018-02-20T07:44:54.421Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve --debug
+[debug] [2018-02-20T07:44:54.421Z] CLI Version:   3.17.4
+[debug] [2018-02-20T07:44:54.421Z] Platform:      darwin
+[debug] [2018-02-20T07:44:54.421Z] Node Version:  v8.6.0
+[debug] [2018-02-20T07:44:54.422Z] Time:          Mon Feb 19 2018 23:44:54 GMT-0800 (PST)
+[debug] [2018-02-20T07:44:54.422Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2018-02-12T03:56:20.824Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2018-02-12T03:56:20.825Z] > authorizing via signed-in user
-[debug] [2018-02-12T03:56:20.827Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/printer-1c171  
+[debug] [2018-02-20T07:44:54.435Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-02-20T07:44:54.436Z] > authorizing via signed-in user
+[debug] [2018-02-20T07:44:54.438Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/printer-1c171  
   
- Sun Feb 11 2018 19:56:20 GMT-0800 (PST)
-[debug] [2018-02-12T03:56:21.310Z] <<< HTTP RESPONSE 200
-[debug] [2018-02-12T03:56:21.311Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/printer-1c171/tokens  
+ Mon Feb 19 2018 23:44:54 GMT-0800 (PST)
+[debug] [2018-02-20T07:44:54.999Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-20T07:44:55.000Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/printer-1c171/tokens  
   
- Sun Feb 11 2018 19:56:21 GMT-0800 (PST)
-[debug] [2018-02-12T03:56:21.925Z] <<< HTTP RESPONSE 200
+ Mon Feb 19 2018 23:44:55 GMT-0800 (PST)
+[debug] [2018-02-20T07:44:55.415Z] <<< HTTP RESPONSE 200
 [info] 
 [info] === Serving from '/Users/kevincrum/Desktop/116/3d-print/src'...
 [info] 
-[debug] [2018-02-12T03:56:21.929Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/printer-1c171  
+[debug] [2018-02-20T07:44:55.418Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/printer-1c171  
   
- Sun Feb 11 2018 19:56:21 GMT-0800 (PST)
-[debug] [2018-02-12T03:56:22.470Z] <<< HTTP RESPONSE 200
-[debug] [2018-02-12T03:56:22.470Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/198617925096/clients/_:getWebAppConfig  
+ Mon Feb 19 2018 23:44:55 GMT-0800 (PST)
+[debug] [2018-02-20T07:44:56.130Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-20T07:44:56.131Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/198617925096/clients/_:getWebAppConfig  
   
- Sun Feb 11 2018 19:56:22 GMT-0800 (PST)
-[debug] [2018-02-12T03:56:23.204Z] <<< HTTP RESPONSE 200
-[debug] [2018-02-12T03:56:23.235Z] TypeError: Cannot read property 'public' of undefined
+ Mon Feb 19 2018 23:44:56 GMT-0800 (PST)
+[debug] [2018-02-20T07:44:56.949Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-20T07:44:56.980Z] TypeError: Cannot read property 'public' of undefined
     at Server.<anonymous> (/usr/local/lib/node_modules/firebase-tools/lib/serve/hosting.js:34:17)
     at Object.onceWrapper (events.js:314:30)
     at emitNone (events.js:105:13)

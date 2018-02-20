@@ -1,6 +1,6 @@
 {
   "projects": {
     "default": "printer-1c171",
-    "authhelp": "printer-1c171"
+    "authset": "printer-1c171"
   }
 }

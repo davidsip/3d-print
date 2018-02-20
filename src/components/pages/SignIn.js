@@ -1,3 +1,5 @@
+//SignIn.js
+
 import React, { Component } from 'react';
 import {
   Link,
@@ -12,6 +14,10 @@ const SignInPage = ({ history }) =>
     <hi> SignIn</hi>
     <SignInForm history ={history} />
     <SignUpLink />
+    <p>
+      new user? 
+      <button> Sign Up </button>
+    </p>
   </div>
 
   const byPropKey = (propertyName, value) => () => ({
@@ -51,10 +57,7 @@ const SignInPage = ({ history }) =>
         });
       event.preventDefault();
 
-      <div>
-        <Link to="/Login/SignUp">Sign Up</Link>
-      </div>
-  } // fomd tjosgjagjadk;gjadsl;kjgads;lkjgad;lkgjad;lkjgad;skljga;lkj
+  } 
 
   render() { 
     const {
@@ -63,11 +66,18 @@ const SignInPage = ({ history }) =>
       error,
     } = this.state;
 
+    <p>
+      Don't have an account?
+        {' '}
+        <Link to="/SignIn/SignUp">Sign Up</Link> 
+    </p>
+
     const isInvalid = 
     password === '' || 
     email === '';
 
     return (
+      
       <form onSubmit={this.onSubmit}>
         <input
           value={email}
@@ -88,7 +98,6 @@ const SignInPage = ({ history }) =>
 
         { error && <p>{error.messge}</p>}
       </form>
-    
 
     );
   }
