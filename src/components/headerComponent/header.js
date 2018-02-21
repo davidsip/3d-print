@@ -11,7 +11,7 @@ class Header extends Component {
       <header>
 
         <div className="logo">
-          LOGO
+          3D Print
         </div>
 
 
@@ -21,11 +21,14 @@ class Header extends Component {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/Products">Products</Link>
+              <Link to="/Products">Designs</Link>
             </li>
-            <li className="last">
+            <li>
               <Link to="/Contacts">Contacts</Link>
             </li>
+            <li className="last">
+              <Link to="/SignIn">SignIn</Link>
+            </li> 
           </ul>
         </nav>
       </header>
