@@ -25,13 +25,13 @@ class App extends Component {
       <div className="App">
         <div className="wrapper">
           <Header/>
-
             <Route exact path='/' component={Homepage} />
             <Route exact path='/Products' component={Products} />
             <Route exact path='/SignIn' component={SignIn} />
             <Route exact path='/SignIn/SignUp' component={SignUp}/>
           <Footer/>
         </div>
+
       </div>
       </Router>
     );

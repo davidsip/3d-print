@@ -25,12 +25,13 @@ $red:#B22222;
 
 
 body {
-  font-family: 'Bellefair', serif;
+  font-family: 'Ubuntu', serif;
   font-size: 25px;
   color: $black;
   font-weight: 400;
   font-style: normal;
-  margin-bottom: 140px;
+  height: 100%;
+//  margin-bottom: 140px;
 }
 
 
@@ -41,7 +42,7 @@ a{
 
   &:hover {
     text-decoration: none;
-    color: $red;
+    color: $lightGrey;
     @include transition(.4s ease-in-out);
   }
 
