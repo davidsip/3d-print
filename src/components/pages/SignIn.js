@@ -59,49 +59,44 @@ const SignInPage = ({ history }) =>
 
   } 
 
-  render() { 
-    const {
-      email,
-      password,
-      error,
-    } = this.state;
+    render() { 
+      const {
+        email,
+        password,
+        error,
+      } = this.state;
 
-    <p>
-      Don't have an account?
-        {' '}
-        <Link to="/SignIn/SignUp">Sign Up</Link> 
-    </p>
-
-    const isInvalid = 
-    password === '' || 
-    email === '';
-
-    return (
       
-      <form onSubmit={this.onSubmit}>
-        <input
-          value={email}
-          onChange={event => this.setState(byPropKey('email', event.target.value))}
-          type="text"
-          placeholder="Email Address"
-        />
+      const isInvalid = 
+      password === '' || 
+      email === '';
 
-        <input
-          value={password}
-          onChange={event => this.setState(byPropKey('password', event.target.value))}
-          type="password"
-          placeholder="Password"
-        />
-        <button disabled={isInvalid} type="submit">
-          Sign In
-        </button>
+      return (
+        
+        <form onSubmit={this.onSubmit}>
+          <input
+            value={email}
+            onChange={event => this.setState(byPropKey('email', event.target.value))}
+            type="text"
+            placeholder="Email Address"
+          />
 
-        { error && <p>{error.messge}</p>}
-      </form>
+          <input
+            value={password}
+            onChange={event => this.setState(byPropKey('password', event.target.value))}
+            type="password"
+            placeholder="Password"
+          />
+          <button disabled={isInvalid} type="submit">
+            Sign In
+          </button>
 
-    );
+          { error && <p>{error.messge}</p>}
+        </form>
+
+      );
+    }
+
   }
-
-}
 
 export default SignInForm
