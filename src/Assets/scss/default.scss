@@ -121,8 +121,14 @@ footer{
     margin-top: 150px;
   }
 
+  // h2 references font on SIGN IN page
   h2{
     padding-top: 15px;
+    color: #fff;
+  }
+
+  // h3 refernces Get Started on the SIGN UP page
+  h3{
     color: #fff;
   }
 
@@ -138,9 +144,12 @@ footer{
   }
 
   button{
+    // TODO: shrink button and change color;
     height: 45px;
     border-radius: 4px; // round corners = nice!
     border: none;
+    background-color: rgb(28,74,147);
+    color: #FFF;
     //padding: 15px 25px;
   }
 
