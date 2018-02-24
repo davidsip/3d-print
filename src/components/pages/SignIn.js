@@ -74,25 +74,38 @@ const SignInPage = ({ history }) =>
       return (
         
         <form onSubmit={this.onSubmit}>
-          <input
-            value={email}
-            onChange={event => this.setState(byPropKey('email', event.target.value))}
-            type="text"
-            placeholder="Email Address"
-          />
-
-          <input
-            value={password}
-            onChange={event => this.setState(byPropKey('password', event.target.value))}
-            type="password"
-            placeholder="Password"
-          />
-          <button disabled={isInvalid} type="submit">
-            Sign In
-          </button>
-
+          <div className= "signForm">
+            <div className= "formBox">
+              <h2> Sign In </h2>
+              <div className= "inputField">
+                  <input
+                    value={email}
+                    onChange={event => this.setState(byPropKey('email', event.target.value))}
+                    type="text"
+                    placeholder="Email Address"
+                  />
+              </div>    
+              <div className= "inputField">
+                  <input
+                    value={password}
+                    onChange={event => this.setState(byPropKey('password', event.target.value))}
+                    type="password"
+                    placeholder="Password"
+                  />
+              </div>
+                <button disabled={isInvalid} type="submit">
+                  Sign In
+                </button>
+                <p>
+                  Don't have an account?
+                  {' '}
+                  <Link to="/SignIn/SignUp">Sign Up</Link> 
+                </p>
+            </div>
+          </div>
           { error && <p>{error.messge}</p>}
         </form>
+        
 
       );
     }
