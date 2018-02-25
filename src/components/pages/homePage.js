@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Dropzone from 'react-dropzone';
 
 class Homepage extends Component {
   render() {
@@ -20,6 +21,17 @@ class Homepage extends Component {
             </p>
           </div>
         </div>
+       class UploadScreen extends Component {
+render() {
+    return (
+     <div className="App">
+      <Dropzone onDrop={(files) => this.onDrop(files)}>
+                <div>Try dropping some files here, or click to select files to upload.</div>
+          </Dropzone>
+     </div>
+     )
+ }
+}
         //new page here************************************************8
         <div className = "content">
           <div className = "picture">
