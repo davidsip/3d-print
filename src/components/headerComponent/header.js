@@ -9,11 +9,17 @@ class Header extends Component {
   render() {
     return (
       <header>
+        <div className = "backImage">
+         
+        </div>
 
         <div className="logo">
           LOGO
         </div>
 
+        <div class = "parallelogram">
+
+        </div>
 
         <nav>
           <ul>
