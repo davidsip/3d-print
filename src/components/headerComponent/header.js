@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {
   Link
 } from 'react-router-dom';
+import SignOutButton from '../pages/SignOut';
 //import Time from './components/headerComponent/time';
 
 
@@ -26,9 +27,15 @@ class Header extends Component {
             <li>
               <Link to="/Contacts">Contacts</Link>
             </li>
+            
+            {/*todo: fix className last}
+            {/*<li className="last">*/}
             <li className="last">
-              <Link to="/SignIn">SignIn</Link>
+              <Link to="/SignIn">Sign In</Link>
             </li> 
+            <li className="last">
+              <Link to='/SignOut'>Sign Out</Link>
+            </li>
           </ul>
         </nav>
       </header>
