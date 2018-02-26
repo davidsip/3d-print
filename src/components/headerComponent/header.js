@@ -24,7 +24,7 @@ class Header extends Component {
               <Link to="/Products">Designs</Link>
             </li>
             <li>
-              <Link to="/Contacts">Contacts</Link>
+              <Link to="/Profile">Profile</Link>
             </li>
             
             {/*todo: fix className last}

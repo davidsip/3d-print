@@ -11,8 +11,6 @@ import * as routes from '../../constants/routes';
 
 const SignUpPage = ({ history }) => 
 	<div>
-    <h1><center>Get started with 3D Print!</center></h1>
-    <h5><center>we love you</center></h5>
     <SignUpForm history={history} />
   </div>
 
@@ -78,7 +76,7 @@ class SignUpForm extends Component{
       username    === ''          ;
 
     return (
-      <div className= "signForm">
+      <div className= "signUpForm">
         <div className= "formBox">
           <form onSubmit={this.onSubmit}>
             <h3>Get Started</h3>
@@ -87,7 +85,7 @@ class SignUpForm extends Component{
                 value={username} // TODO: BREAK UP THIS LONG LINE
                 onChange={event => this.setState(byPropKey('username', event.target.value))}
                 type="text"
-                placeholder="Full Name"
+                placeholder="Username"
               />
             </div>
             <div className= "inputField">

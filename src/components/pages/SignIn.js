@@ -75,7 +75,7 @@ const SignInPage = ({ history }) =>
       return (
         
         <form onSubmit={this.onSubmit}>
-          <div className= "signForm">
+          <div className= "signInForm">
             <div className= "formBox">
               <h2> Sign In </h2>
               <div className= "inputField">
