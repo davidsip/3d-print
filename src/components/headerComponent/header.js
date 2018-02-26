@@ -15,7 +15,6 @@ class Header extends Component {
           3D Print
         </div>
 
-
         <nav>
           <ul>
             <li className="first">
@@ -30,10 +29,10 @@ class Header extends Component {
             
             {/*todo: fix className last}
             {/*<li className="last">*/}
-            <li className="last">
+            <li className="sIn">
               <Link to="/SignIn">Sign In</Link>
             </li> 
-            <li className="last">
+            <li className="sOut">
               <Link to='/SignOut'>Sign Out</Link>
             </li>
           </ul>
