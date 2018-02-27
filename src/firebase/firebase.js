@@ -13,6 +13,18 @@ if (!firebase.apps.length){
   firebase.initializeApp(config);
 }
 
+// Useful console debug code to print out if a user signed out
+firebase.auth().signOut().then(function() {
+  console.log('Signed Out');
+}, function(error) {
+  console.error('Sign Out Error', error);
+});
+
+firebase.auth().signOut().then(function() {
+  console.log('Signed Out');
+}, function(error) {
+  console.error('Sign Out Error', error);
+});
 const auth = firebase.auth();
 
 export{
