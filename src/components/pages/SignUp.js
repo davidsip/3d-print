@@ -11,7 +11,6 @@ import * as routes from '../../constants/routes';
 
 const SignUpPage = ({ history }) => 
 	<div>
-    <h1>SignUp</h1>
     <SignUpForm history={history} />
   </div>
 
@@ -77,37 +76,50 @@ class SignUpForm extends Component{
       username    === ''          ;
 
     return (
-      <form onSubmit={this.onSubmit}>
-        <input
-          value={username} // TODO: BREAK UP THIS LONG LINE
-          onChange={event => this.setState(byPropKey('username', event.target.value))}
-          type="text"
-          placeholder="Full Name"
-        />
-        <input
-          value={email}
-          onChange={event => this.setState(byPropKey('email',event.target.value))} 
-          type="text"
-          placeholder="Email Address"
-        />
-        <input
-          value={passwordOne}
-          onChange={event => this.setState(byPropKey('passwordOne', event.target.value))}
-          type="password"
-          placeholder="Password"
-        />
-        <input
-          value={passwordTwo}
-          onChange={event => this.setState(byPropKey('passwordTwo',event.target.value))}      
-          type="password"
-          placeholder="Confirm Password"
-        />
-        <button disabled={isInvalid} type="submit">
-          Sign Up
-        </button>
+      <div className= "signUpForm">
+        <div className= "formBox">
+          <form onSubmit={this.onSubmit}>
+            <h3>Get Started</h3>
+            <div className= "inputField">          
+              <input
+                value={username} // TODO: BREAK UP THIS LONG LINE
+                onChange={event => this.setState(byPropKey('username', event.target.value))}
+                type="text"
+                placeholder="Username"
+              />
+            </div>
+            <div className= "inputField">
+              <input
+                value={email}
+                onChange={event => this.setState(byPropKey('email',event.target.value))} 
+                type="text"
+                placeholder="Email Address"
+              />
+            </div>  
+            <div className= "inputField">  
+              <input
+                value={passwordOne}
+                onChange={event => this.setState(byPropKey('passwordOne', event.target.value))}
+                type="password"
+                placeholder="Password"
+              />
+            </div>
+            <div className= "inputField">  
+              <input
+                value={passwordTwo}
+                onChange={event => this.setState(byPropKey('passwordTwo',event.target.value))}      
+                type="password"
+                placeholder="Confirm Password"
+              />
+            </div>
+            <button disabled={isInvalid} type="submit">
+              Sign Up
+            </button>
+            { error && <p>{error.message}</p> }
+          </form>
+        </div> 
+      </div>
 
-        { error && <p>{error.message}</p> }
-      </form> 
     );
   }
    

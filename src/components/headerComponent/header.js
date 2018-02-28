@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {
   Link
 } from 'react-router-dom';
+import SignOutButton from '../pages/SignOut';
 //import Time from './components/headerComponent/time';
 
 
@@ -14,7 +15,6 @@ class Header extends Component {
           3D Print
         </div>
 
-
         <nav>
           <ul>
             <li className="first">
@@ -24,11 +24,17 @@ class Header extends Component {
               <Link to="/Products">Designs</Link>
             </li>
             <li>
-              <Link to="/Contacts">Contacts</Link>
+              <Link to="/Profile">Profile</Link>
             </li>
-            <li className="last">
-              <Link to="/SignIn">SignIn</Link>
+            
+            {/*todo: fix className last}
+            {/*<li className="last">*/}
+            <li className="sIn">
+              <Link to="/SignIn">Sign In</Link>
             </li> 
+            <li className="sOut">
+              <Link to='/SignOut'>Sign Out</Link>
+            </li>
           </ul>
         </nav>
       </header>

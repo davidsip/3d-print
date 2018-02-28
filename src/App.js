@@ -16,6 +16,7 @@ import Homepage from './components/pages/homePage';
 import Products from './components/pages/products';
 import SignIn   from './components/pages/SignIn';
 import SignUp   from './components/pages/SignUp';
+import SignOut  from './components/pages/SignOut';
 //import Time from './components/headerComponent/time';
 
 class App extends Component {
@@ -29,6 +30,7 @@ class App extends Component {
             <Route exact path='/Products' component={Products} />
             <Route exact path='/SignIn' component={SignIn} />
             <Route exact path='/SignIn/SignUp' component={SignUp}/>
+            <Route exact path='/SignOut' component={SignOut}/>
           <Footer/>
         </div>
 
