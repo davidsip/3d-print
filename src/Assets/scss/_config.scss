@@ -6,6 +6,9 @@ $lightGrey:#D3D3D3;
 $darkGrey:#696969;
 $red:#B22222;
 
+$BUTTON:rgba(#000,.8);
+$BUTTON-HOVER:rgba(#000,.6);
+$BUTTON-ACTIVE:rgba(#000,1);
 
 //mixins
 
@@ -36,14 +39,15 @@ body {
 
 
 a{
-  text-decoration: none;
-  @include transition(.4s ease-in-out);
+  @include transition(.2s ease-in-out);
   cursor: pointer;
-
-  &:hover {
-    text-decoration: none;
-    color: $lightGrey;
-    @include transition(.4s ease-in-out);
+  color: $BUTTON;
+  &:hover{
+      text-decoration: none;
+      color: $BUTTON-HOVER;
+  }
+  &:active{
+      color: $BUTTON-ACTIVE;
   }
 
 }
