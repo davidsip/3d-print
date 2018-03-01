@@ -5,6 +5,7 @@ import {
   Link
 } from 'react-router-dom';
 import ReactDOM from 'react-dom';
+//import { firebase } from './firebase';
 
 //includes
 import './Assets/css/default.min.css';
@@ -20,12 +21,31 @@ import SignOut  from './components/pages/SignOut';
 //import Time from './components/headerComponent/time';
 
 class App extends Component {
+  
+  constructor(props){
+    super(props);
+
+    this.state={
+      authUser: null,
+    };
+  }
+
+  /*
+  componentDidMount(){
+    //firebase.auth.Auth.onAuthStateChanged(authUser => {
+    auth.onAuthStateChanged(authUser => {
+      authUser
+        ? this.setState(() => ({ authUser }))
+        : this.setState(() => ({ authUser: null }));
+    });
+  }
+*/
   render() {
     return (
       <Router>
       <div className="App">
         <div className="wrapper">
-          <Header/>
+          <Header authUser={this.state.authUser} />
             <Route exact path='/' component={Homepage} />
             <Route exact path='/Products' component={Products} />
             <Route exact path='/SignIn' component={SignIn} />
