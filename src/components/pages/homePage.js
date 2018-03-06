@@ -22,7 +22,7 @@ class Homepage extends Component {
             </div>
           </div>
         </div>
-        //new page here************************************************8
+        //----------------------------new page here-----------------------------//
         <div className = "content">
           <div className="backImage">
             <div className = "picture">
