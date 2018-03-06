@@ -8,9 +8,11 @@ const config={
     storageBucket: "printer-1c171.appspot.com",
     messagingSenderId: "198617925096"
 };
-//
+// is this getting called
+
 if (!firebase.apps.length){
   firebase.initializeApp(config);
+  console.log('init?');
 }
 
 // Useful console debug code to print out if a user signed out
@@ -25,12 +27,12 @@ firebase.auth().signOut().then(function() {
   console.error('Sign Out Error', error);
 });
 
+// athur has this line
+// const config = process.env.NODE_ENV === 'production'
 
 const auth = firebase.auth();
 //const appconf = firebase.initializeApp(config);
 
 export{
-  
   auth,
-
 };

@@ -5,8 +5,9 @@ import {
   Link
 } from 'react-router-dom';
 import ReactDOM from 'react-dom';
+import { auth } from './firebase/firebase';
 //import { firebase } from './firebase';
-
+//import * as firbase from 'firebase'
 //includes
 import './Assets/css/default.min.css';
 
@@ -21,6 +22,25 @@ import SignOut  from './components/pages/SignOut';
 //import Time from './components/headerComponent/time';
 
 class App extends Component {
+  /*
+  constructor(props){
+    super(props);
+
+    this.state={
+      authUser: null,
+    };
+  }
+
+ 
+  componentDidMount(){
+    //firebase.auth.Auth.onAuthStateChanged(authUser => {
+    auth.onAuthStateChanged(authUser => {
+      authUser
+        ? this.setState(() => ({ authUser }))
+        : this.setState(() => ({ authUser: null }));
+    });
+  }
+  */
   
   constructor(props){
     super(props);
@@ -30,16 +50,20 @@ class App extends Component {
     };
   }
 
-  /*
+  getChildContext(){
+    return{
+      authUser: this.state.authUser,
+    };
+  }
+
   componentDidMount(){
-    //firebase.auth.Auth.onAuthStateChanged(authUser => {
     auth.onAuthStateChanged(authUser => {
       authUser
         ? this.setState(() => ({ authUser }))
-        : this.setState(() => ({ authUser: null }));
+        : this.setState(() => ({ authUser:null}));
     });
   }
-*/
+
   render() {
     return (
       <Router>
@@ -58,6 +82,7 @@ class App extends Component {
       </Router>
     );
   }
+
 }
 
 export default App;
