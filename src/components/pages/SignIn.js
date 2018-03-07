@@ -6,7 +6,7 @@ import {
   Link,
   withRouter,
 } from 'react-router-dom';
-import { auth } from '../../firebase';
+import { auth } from '../../firebase/index';
 import { SignUpLink } from './SignUp';
 import * as routes from '../../constants/routes';
 

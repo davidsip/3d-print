@@ -18,11 +18,21 @@ import PropTypes from 'prop-types';
 // under the HeaderWithAuth arrow fcn vs the HeaderNonAuth
 //           signed In                       not signed in
 
+/*
 const Header = (props, { authUser }) =>
   <div>
     { authUser
         ? <HeaderWithAuth />
         : <HeaderNonAuth />
+    }
+  </div>
+*/
+
+const Header = ({ authUser }) =>
+  <div>
+    { authUser 
+      ? <HeaderWithAuth />
+      : <HeaderNonAuth />
     }
   </div>
 
