@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 import { Link,
          withRouter,
 } from 'react-router-dom'; // todo: where go after sign up
-import { auth } from '../../firebase/';
+import { auth, } from '../../firebase/';
 import * as routes from '../../constants/routes';
 
 
