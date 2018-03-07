@@ -26,6 +26,7 @@ const SignInPage = ({ history }) =>
   });
 
   const INITIAL_STATE = {
+    username: '',
     email: '',
     password: '',
     error: null,
@@ -40,6 +41,7 @@ const SignInPage = ({ history }) =>
 
     onSubmit = (event) => { 
       const {
+        username,
         email,
         password,
       } = this.state;
@@ -62,6 +64,7 @@ const SignInPage = ({ history }) =>
 
     render() { 
       const {
+        username,
         email,
         password,
         error,
