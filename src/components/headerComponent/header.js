@@ -18,11 +18,22 @@ import PropTypes from 'prop-types';
 // under the HeaderWithAuth arrow fcn vs the HeaderNonAuth
 //           signed In                       not signed in
 
+/*
 const Header = (props, { authUser }) =>
   <div>
     { authUser
         ? <HeaderWithAuth />
         : <HeaderNonAuth />
+    }
+  </div>
+*/
+
+
+const Header = ({ authUser }) =>
+  <div>
+    { authUser 
+      ? <HeaderWithAuth />
+      : <HeaderNonAuth />
     }
   </div>
 
@@ -49,7 +60,20 @@ const HeaderWithAuth = () =>
             <li>
               <Link to="/Profile">Profile</Link>
             </li>
-          
+            {/* this shall be the account drop down */}
+            <li className="profile-parrent" >
+                <a> Welcome this.user </a>
+                <ul className="profile-sub-menu">
+                  <li>
+                    {/*<Link to='/Profile'>Profile</Link> */}
+                    <a> Profile </a>
+                  </li>
+                  <li>
+                    <Link to='/SignOut'>Sign Out</Link>
+                  </li>
+                </ul>
+            </li>
+
             <li className="sIn">
               <Link to="/SignIn">Sign In</Link>
             </li> 
@@ -58,7 +82,7 @@ const HeaderWithAuth = () =>
             </li>
           </ul>
         </nav>
-      </header>
+    </header>
 
 const HeaderNonAuth = () =>
     <header>
