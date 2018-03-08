@@ -23,6 +23,7 @@ class Homepage extends Component {
             </div>
           </div>
         </div>
+<<<<<<< HEAD
        class UploadScreen extends Component {
 render() {
     return (
@@ -35,6 +36,9 @@ render() {
  }
 }
         //new page here************************************************8
+=======
+        {/*//new page here********************************************** */}
+>>>>>>> 8636e15c34b14d5e7a139cf7c7ad9b442f1c407a
         <div className = "content">
           <div className="backImage">
             <div className = "picture">
