@@ -1,25 +1,28 @@
 # 3d-print
-
+##### note the '$' signifies the command line.  Do not type the $ #####
 Needs node.js
 
 git clone this repo
 
-run npm install 
+run 
+$npm install 
 
-run npm install --save react-router-dom
+run 
+$npm install --save react-router-dom
 
-run npm start
+run 
+$npm start
 
-# Also because our program uses gulp because of node.js you may want to do this as well
+### Also because our program uses gulp because of node.js you may want to do this as well ###
 
-npm install gulp-cli -g
+$npm install gulp-cli -g
 
-npm install gulp -D
+$npm install gulp -D
 
-touch gulpfile.js
+$touch gulpfile.js
 
 to understand it 
-gulp --help
+$gulp --help
 
-# for the upload button
-npm install axios
+### for the upload button ###
+$npm install axios
