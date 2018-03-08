@@ -16,7 +16,7 @@ const SignInPage = ({ history }) =>
     <SignInForm history ={history} />
     <SignUpLink />
     <p>
-      new user? 
+      new user?
       <button> Sign Up </button>
     </p>
   </div>
@@ -39,14 +39,14 @@ const SignInPage = ({ history }) =>
       this.state = { ...INITIAL_STATE };
     }
 
-    onSubmit = (event) => { 
+    onSubmit = (event) => {
       const {
         username,
         email,
         password,
       } = this.state;
 
-      const { 
+      const {
         history,
       } = this.props;
 
@@ -54,15 +54,15 @@ const SignInPage = ({ history }) =>
         .then(() => {
           this.setState(() => ({ ...INITIAL_STATE }));
           history.push(routes.HOME);
-        })        
+        })
         .catch(error => {
           this.setState(byPropKey('error', error));
         });
       event.preventDefault();
 
-  } 
+  }
 
-    render() { 
+    render() {
       const {
         username,
         email,
@@ -70,13 +70,13 @@ const SignInPage = ({ history }) =>
         error,
       } = this.state;
 
-      
-      const isInvalid = 
-      password === '' || 
+
+      const isInvalid =
+      password === '' ||
       email === '';
 
       return (
-        
+
         <form onSubmit={this.onSubmit}>
           <div className= "signInForm">
             <div className= "formBox">
@@ -88,7 +88,7 @@ const SignInPage = ({ history }) =>
                     type="text"
                     placeholder="Email Address"
                   />
-              </div>    
+              </div>
               <div className= "inputField">
                   <input
                     value={password}
@@ -103,13 +103,13 @@ const SignInPage = ({ history }) =>
                 <p>
                   Don't have an account?
                   {' '}
-                  <Link to="/SignIn/SignUp">Sign Up</Link> 
+                  <Link to="/SignIn/SignUp">Sign Up</Link>
                 </p>
             </div>
           </div>
           { error && <p>{error.messge}</p>}
         </form>
-        
+
 
       );
     }

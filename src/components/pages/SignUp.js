@@ -1,7 +1,7 @@
 // SignUp.js
 // From "The Road to React with Firebase" ebook
 // by: Robin Wieruch
-import React, { Component } from 'react'; 
+import React, { Component } from 'react';
 import { Link,
          withRouter,
 } from 'react-router-dom'; // todo: where go after sign up
@@ -9,7 +9,7 @@ import { auth, } from '../../firebase/';
 import * as routes from '../../constants/routes';
 
 
-const SignUpPage = ({ history }) => 
+const SignUpPage = ({ history }) =>
 	<div>
     <SignUpForm history={history} />
   </div>
@@ -29,9 +29,9 @@ const byPropKey = (propertyName, value) => () => ({
   [propertyName]: value,
 });
 
-class SignUpForm extends Component{ 
+class SignUpForm extends Component{
   constructor(props) {
-    super(props); 
+    super(props);
     // {...INITIAL_STATE}
     this.state = { ...INITIAL_STATE}; //todo change link
   }
@@ -66,7 +66,7 @@ class SignUpForm extends Component{
       passwordOne,
       passwordTwo,
       error,
-    } = this.state;  
+    } = this.state;
 
     // isInvalid used to make submit button 'notclicky'
     const isInvalid =
@@ -79,8 +79,8 @@ class SignUpForm extends Component{
       <div className= "signUpForm">
         <div className= "formBox">
           <form onSubmit={this.onSubmit}>
-            <h3>Get Started</h3>
-            <div className= "inputField">          
+            <h2>Get Started</h2>
+            <div className= "inputField">
               <input
                 value={username} // TODO: BREAK UP THIS LONG LINE
                 onChange={event => this.setState(byPropKey('username', event.target.value))}
@@ -91,12 +91,12 @@ class SignUpForm extends Component{
             <div className= "inputField">
               <input
                 value={email}
-                onChange={event => this.setState(byPropKey('email',event.target.value))} 
+                onChange={event => this.setState(byPropKey('email',event.target.value))}
                 type="text"
                 placeholder="Email Address"
               />
-            </div>  
-            <div className= "inputField">  
+            </div>
+            <div className= "inputField">
               <input
                 value={passwordOne}
                 onChange={event => this.setState(byPropKey('passwordOne', event.target.value))}
@@ -104,10 +104,10 @@ class SignUpForm extends Component{
                 placeholder="Password"
               />
             </div>
-            <div className= "inputField">  
+            <div className= "inputField">
               <input
                 value={passwordTwo}
-                onChange={event => this.setState(byPropKey('passwordTwo',event.target.value))}      
+                onChange={event => this.setState(byPropKey('passwordTwo',event.target.value))}
                 type="password"
                 placeholder="Confirm Password"
               />
@@ -117,24 +117,24 @@ class SignUpForm extends Component{
             </button>
             { error && <p>{error.message}</p> }
           </form>
-        </div> 
+        </div>
       </div>
 
     );
   }
-   
+
 }
-  
-const SignUpLink = () => 
+
+const SignUpLink = () =>
   <p>
     Don't have an account?
       {' '}
-      <Link to="/SignIn/SignUp">Sign Up</Link> 
+      <Link to="/SignIn/SignUp">Sign Up</Link>
   </p>
 
 export default withRouter(SignUpPage);
-  
-export{ 
-  SignUpForm, 
+
+export{
+  SignUpForm,
   SignUpLink,
 };
