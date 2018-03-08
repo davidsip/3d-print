@@ -14,7 +14,7 @@ import PropTypes from 'prop-types';
 // if the user is signed in
 
 // Const is is used to help with performance and session
-// handling.  Most future header development would take place 
+// handling.  Most future header development would take place
 // under the HeaderWithAuth arrow fcn vs the HeaderNonAuth
 //           signed In                       not signed in
 
@@ -31,7 +31,7 @@ const Header = (props, { authUser }) =>
 
 const Header = ({ authUser }) =>
   <div>
-    { authUser 
+    { authUser
       ? <HeaderWithAuth />
       : <HeaderNonAuth />
     }
@@ -55,17 +55,28 @@ const HeaderWithAuth = () =>
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/Products">Designs</Link>
+              <Link to="/Designs">Designs</Link>
             </li>
             <li>
               <Link to="/Profile">Profile</Link>
             </li>
-            {/* this shall be the account drop down */}
-            <li className="profile-parrent" >
+            {/* this shall be the account drop down
+              <nav className = "dropdown">
+                <ul>
+                  <li>
+                    here
+                  </li>
+
+
+                </ul>
+              </nav>*/}
+
+
+            {/*<li className="profile-parrent" >
                 <a> Welcome this.user </a>
                 <ul className="profile-sub-menu">
                   <li>
-                    {/*<Link to='/Profile'>Profile</Link> */}
+                    {/*<Link to='/Profile'>Profile</Link>
                     <a> Profile </a>
                   </li>
                   <li>
@@ -76,7 +87,9 @@ const HeaderWithAuth = () =>
 
             <li className="sIn">
               <Link to="/SignIn">Sign In</Link>
-            </li> 
+            </li>
+            */}
+
             <li className="sOut">
               <Link to='/SignOut'>Sign Out</Link>
             </li>
@@ -90,24 +103,26 @@ const HeaderNonAuth = () =>
           3D Print
         </div>
 
+
         <nav>
           <ul>
             <li className="first">
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/Products">Designs</Link>
+              <Link to="/Designs">Designs</Link>
             </li>
             <li>
               <Link to="/Profile">Profile</Link>
             </li>
-          
+
             <li className="sIn">
               <Link to="/SignIn">Sign In</Link>
-            </li> 
+            </li>
             {/* hidden link for sign out */}
           </ul>
         </nav>
       </header>
 
 export default Header;
+

@@ -10,7 +10,7 @@ run npm install --save react-router-dom
 
 run npm start
 
-Also because our program uses gulp because of node.js you may want to do this as well
+# Also because our program uses gulp because of node.js you may want to do this as well
 
 npm install gulp-cli -g
 
@@ -20,3 +20,6 @@ touch gulpfile.js
 
 to understand it 
 gulp --help
+
+# for the upload button
+npm install axios
