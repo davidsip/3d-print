@@ -1,0 +1,69 @@
+@import "_config.scss";
+
+header {
+  font-family: 'Joti One', cursive;
+  font-size: 25px;
+  position: relative;
+  display: block;
+  width: 100%;
+  background: $black;
+  color: $white;
+  height: 120px;
+  margin-bottom: 15px;
+
+
+  .logo{
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    @include translateY(-50%);
+  }
+
+  nav,
+  nav ul,
+  nav ul li{
+    margin: 0;
+    padding: 0;
+  }
+
+  nav{
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    @include translateY(-50%);
+
+    ul li {
+      list-style-type: none;
+      display: inline-block;
+      margin-right: 20px;
+
+      &.last{
+        margin: 0;
+      }
+
+      a{
+        font-size: 30px;
+        line-height: normal;
+        color: $white;
+      }
+
+
+    }
+
+  }
+
+}
+footer{
+  font-family: 'Joti One', cursive;
+  color: $darkGrey;
+  position: relative;
+  display: block;
+  width: 100%;
+  background: $lightGrey;
+  height: 90px;
+  bottom: 0px;
+  margin-top: 100px;
+
+
+
+}

@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 import { Link,
          withRouter,
 } from 'react-router-dom'; // todo: where go after sign up
-import { auth, } from '../../firebase/';
+import { auth,database } from '../../firebase/';
 import * as routes from '../../constants/routes';
 
 
@@ -46,7 +46,12 @@ class SignUpForm extends Component{
     const{
       history,
     } = this.props;
-
+    database.doCreateUserName(username).then (() => {
+        this.setState(() => ({ ...INITIAL_STATE }));history.push(routes.HOME);
+    })
+    .catch(error =>{
+        this.setState(byPropKey('error',error));
+      });
     auth.doCreateUserWithEmailAndPassword(email, passwordOne)
       .then(authUser => {
         this.setState(() => ({...INITIAL_STATE}));
