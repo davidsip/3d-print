@@ -29,7 +29,7 @@ const Header = (props, { authUser }) =>
 */
 
 
-const Header = ({ authUser }) =>
+const Header = (props, { authUser }) =>
   <div>
     { authUser
       ? <HeaderWithAuth />
@@ -37,10 +37,13 @@ const Header = ({ authUser }) =>
     }
   </div>
 
+Header.contextTypes = {
+  authUser: PropTypes.object,
+};
+
 //Navigation.contextTypes = {
 //  authUser: PropTypes.object,
 //};
-
 
 
 const HeaderWithAuth = () =>

@@ -19,8 +19,33 @@ import SignIn   from './components/pages/SignIn';
 import SignUp   from './components/pages/SignUp';
 import SignOut  from './components/pages/SignOut';
 import Profile  from './components/pages/Profile';
+import withAuthentication from './withAuthentication';
 //import Time from './components/headerComponent/time';
 
+// rewrite App as a const arrow functions
+// App will act as our router only and 
+// other components will handle protected paths
+const App = () =>
+  <Router>
+    <div className="App">
+      <div className="wrapper">
+          <Header />
+        {/* handled in header <Header authUser={this.state.authUser} />*/}
+          <Route exact path='/' component={Homepage} />
+          <Route exact path='/Products' component={Products} />
+          <Route exact path='/SignIn' component={SignIn} />
+          <Route exact path='/SignIn/SignUp' component={SignUp}/>
+          <Route exact path='/SignOut' component={SignOut}/>
+          <Route exact path='/Profile' component={Profile} />
+        <Footer/>
+      </div>
+
+    </div>
+    </Router>
+
+export default withAuthentication(App);
+
+{/*
 class App extends Component {
   
   constructor(props){
@@ -63,3 +88,4 @@ class App extends Component {
 }
 
 export default App;
+*/} 

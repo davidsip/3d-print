@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-
+import { firebase } from '../../firebase/index';
 //import { PasswordForgetForm } from '../PasswordForget';
 //import PasswordChangeForm from '../PasswordChange';
 //import withAuthorization from '../Session/withAuthorization';
@@ -23,6 +23,8 @@ AccountPage);
 */
 
 class Profile extends Component{
+
+  //firebase.auth().currentUser
 
   render(){
     return(
