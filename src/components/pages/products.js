@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {database} from '../../firebase';
 import {Productframe} from './framework/productframe';
-const ProductPage = ({ history }) =>
+const ProductPage = ( ) =>
 <div>
 <h1>Designs</h1>
 <Products />     
@@ -11,7 +11,7 @@ const ProductPage = ({ history }) =>
     return (
       <div className = "container-fluid">
       <div className = "design">
-            
+           
       </div>
 
       </div>
