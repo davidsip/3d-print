@@ -236,3 +236,10 @@ footer {
     font-size: 15px;
     color: #fff
 }
+
+.sOutButton button {
+    background-color: #1c4a93;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+}
