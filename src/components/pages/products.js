@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import {database} from '../../firebase';
-import {Productframe} from './framework/productframe';
+//import {database} from '../../firebase';
+//import {Productframe} from './framework/productframe';
 const ProductPage = ( ) =>
 <div>
 <h1>Designs</h1>
