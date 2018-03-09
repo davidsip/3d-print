@@ -115,10 +115,6 @@ const HeaderNonAuth = () =>
             <li>
               <Link to="/Designs">Designs</Link>
             </li>
-            <li>
-              <Link to="/Profile">Profile</Link>
-            </li>
-
             <li className="sIn">
               <Link to="/SignIn">Sign In</Link>
             </li>

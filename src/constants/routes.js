@@ -3,7 +3,8 @@
 // It follows style guides set in Road to React with Firebase e-book
 
 export const SIGN_UP = '/signup';
-export const SIGN_IN = '/signin';
+export const SIGN_IN = '/SignIn';
+export const SIGN_OUT = '/SignOut';
 export const LANDING = '/';
 export const HOME = '/';
 export const ACCOUNT = '/account';
