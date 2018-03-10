@@ -60,19 +60,25 @@ const HeaderWithAuth = () =>
             <li>
               <Link to="/Designs">Designs</Link>
             </li>
-            <li>
+            <li className = "dropdown-parent">
               <Link to="/Profile">Profile</Link>
+              {/* this shall be the account drop down*/}
+                  <ul className = "dropdown">
+                    <li>
+                      here1
+                    </li>
+                    <li>
+                      here2
+                    </li>
+                    <li>
+                      here3
+                    </li>
+                    <li className="sOut">
+                      <Link to='/SignOut'>Sign Out</Link>
+                    </li>
+                  </ul>
             </li>
-            {/* this shall be the account drop down
-              <nav className = "dropdown">
-                <ul>
-                  <li>
-                    here
-                  </li>
 
-
-                </ul>
-              </nav>*/}
 
 
             {/*<li className="profile-parrent" >
@@ -92,10 +98,6 @@ const HeaderWithAuth = () =>
               <Link to="/SignIn">Sign In</Link>
             </li>
             */}
-
-            <li className="sOut">
-              <Link to='/SignOut'>Sign Out</Link>
-            </li>
           </ul>
         </nav>
     </header>

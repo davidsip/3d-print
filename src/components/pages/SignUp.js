@@ -6,8 +6,13 @@ import { Link,
          withRouter,
 } from 'react-router-dom'; // todo: where go after sign up
 import { auth,
+<<<<<<< HEAD
          //database 
        } from '../../firebase/';
+=======
+//  database
+ } from '../../firebase/';
+>>>>>>> david
 import * as routes from '../../constants/routes';
 
 
@@ -48,6 +53,7 @@ class SignUpForm extends Component{
     const{
       history,
     } = this.props;
+<<<<<<< HEAD
     
     /*
     database.doCreateUserName(username).then (() => {
@@ -58,6 +64,14 @@ class SignUpForm extends Component{
         this.setState(byPropKey('error',error));
       });
     */
+=======
+    // database.doCreateUserName(username).then (() => {
+    //     this.setState(() => ({ ...INITIAL_STATE }));history.push(routes.HOME);
+    // })
+    // .catch(error =>{
+    //     this.setState(byPropKey('error',error));
+    //   });
+>>>>>>> david
     auth.doCreateUserWithEmailAndPassword(email, passwordOne)
       .then(authUser => {
         this.setState(() => ({...INITIAL_STATE}));
