@@ -4,11 +4,6 @@ import * as firebase from './firebase';
 
 export{
   auth,
-<<<<<<< HEAD
-  firebase, 
-  //database,
-=======
   firebase,
-//  database,
->>>>>>> david
+  //database,
 };
