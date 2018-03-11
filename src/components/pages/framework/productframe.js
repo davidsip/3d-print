@@ -4,6 +4,7 @@ import {
   Link,
   withRouter,
 } from 'react-router-dom';
+    
     const INITIAL_STATE = {
     productname: '',
     designer: '',
@@ -12,12 +13,14 @@ import {
     picture: null,
     error: null,
   };
+
 class Productframe extends Component{
     constructor(props) {
       super(props);
 
       this.state = { ...INITIAL_STATE };
-    }
+    }   
+    
     render(){
         const {
         productname,
