@@ -1,4 +1,5 @@
 // SignUp.js
+// src/components/pages/SignUp
 // From "The Road to React with Firebase" ebook
 // by: Robin Wieruch
 import React, { Component } from 'react';
@@ -6,8 +7,8 @@ import { Link,
          withRouter,
 } from 'react-router-dom'; 
 import { auth,
-         database          // todo: tis may need to come from index
-       } from '../../firebase/';
+         db,          // todo: tis may need to come from index
+       } from '../../firebase/index';
 import * as routes from '../../constants/routes';
 
 
@@ -48,12 +49,13 @@ class SignUpForm extends Component{
     const{
       history,
     } = this.props;
-    
+
+
     /*
     database.doCreateUserName(username).then (() => {
         this.setState(() => ({ ...INITIAL_STATE }));history.push(routes.HOME);
     })
-    
+
     .catch(error =>{
         this.setState(byPropKey('error',error));
       });
@@ -62,7 +64,7 @@ class SignUpForm extends Component{
       .then(authUser => {
 
         // Create user in our db
-        database.doCreatUser(authUser.uid, username, email)
+        db.doCreateUser(authUser.uid, username, email)
           .then(() => {        
             this.setState(() => ({...INITIAL_STATE}));
             history.push(routes.HOME);

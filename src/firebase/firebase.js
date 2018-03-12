@@ -31,9 +31,9 @@ firebase.auth().signOut().then(function() {
 // const config = process.env.NODE_ENV === 'production'
 
 const auth = firebase.auth();
-const database = firebase.database();
+const db = firebase.database();
 
 export{
   auth,
-  database,
+  db,
 };

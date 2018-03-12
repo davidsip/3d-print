@@ -1,3 +1,4 @@
+/*
 {
   "rules": {
     ".read": "auth != null",
@@ -5,5 +6,12 @@
       "elements": {
        ".indexOn": ["Designer","Name"]
       }
+  }
+}
+*/
+{
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null"
   }
 }
