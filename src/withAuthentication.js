@@ -50,3 +50,10 @@ const withAuthentication = (Component) =>{
 
 // export Higher Order Component
 export default withAuthentication;
+
+/*
+index.js:2177 Warning: Can only update a mounted or mounting component. 
+This usually means you called setState, replaceState, or forceUpdate on 
+an unmounted component. This is a no-op.
+Please check the code for the WithAuthentication component.
+*/

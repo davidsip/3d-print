@@ -15,20 +15,6 @@ if (!firebase.apps.length){
   console.log('init?');
 }
 
-// Useful console debug code to print out if a user signed out
-// Uncomment code and when a user is signed in, if they sign
-// out the console should print out sign out
-// 		that's the idea
-//		it is just printing signout no matter what
-//		fuck
-firebase.auth().signOut().then(function() {
-  console.log('Signed Out');
-}, function(error) {
-  console.error('Sign Out Error', error);
-});
-
-// athur has this line
-// const config = process.env.NODE_ENV === 'production'
 
 const auth = firebase.auth();
 const db = firebase.database();

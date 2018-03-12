@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {
   Link
 } from 'react-router-dom';
-import SignOutButton from '../pages/SignOut';
+//import SignOutButton from '../pages/SignOut';
 //import Time from './components/headerComponent/time';
 //https://reactjs.org/docs/typechecking-with-proptypes.html
 import PropTypes from 'prop-types';
