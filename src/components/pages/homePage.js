@@ -34,7 +34,7 @@ class Homepage extends Component {
             emerging global 3D printing market. We want to encourage surf board fin production
             to empower surfers and local communities.
             </p>
-            </div>
+          </div>
     
         </div>
 

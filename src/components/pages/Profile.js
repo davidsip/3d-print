@@ -9,7 +9,7 @@ const Profile = (props, { authUser }) =>
     <h1>
         welcome to Profile, dont get caught in the storm
     </h1>
-    <p1> this page will be protected </p1>
+    <p> this page will be protected </p>
   </div>
 
 Profile.contextTypes = {
