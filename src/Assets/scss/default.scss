@@ -93,23 +93,6 @@ header {
 
 }
 
-.picture {
-  position: relative;
-  float: right;
-  width: 60%;
-  text-align: center;
-}
-.picture img{
-  width: 100%;
-}
-
-
-// .picture img{
-//   height: 60%;
-//   width: 60%;
-//       float: right;
-// }
-
 .text{
   margin-right: 100px;
 }
@@ -117,6 +100,71 @@ header {
 .text p {
   font-size: 20px;
 }
+
+.wrap{
+  width: 800px;
+  margin: auto;
+}
+
+.boxes {
+   position: absolute;
+   width: 800px;
+   text-align: center;
+  }
+
+
+  .boxes img{
+    margin: auto;
+    width: 800px;
+  }
+
+
+.box {
+    width: 800px ;
+    height: 500px;
+    position: absolute;
+    top: 100;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+  }
+  
+  .black:checked ~ .boxes > .black,
+  .red:checked ~ .boxes > .red,
+  .yellow:checked ~ .boxes > .yellow
+  {
+    opacity: 1;
+  }
+
+.black:checked ~ .labels > .b-label,
+.red:checked ~ .labels > .r-label,
+.yellow:checked ~ .labels > .y-label
+{
+  background-color: #000000;
+}
+
+  .labels {
+      position: absolute;
+      bottom: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+  }
+
+  .s-index{
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: inline-block;
+    margin-right: 6px;
+    cursor: pointer;
+    border: 1px solid;
+  }
+
+  .rnav {
+    display: none;
+  }
+
 
 h1{
   margin-top: 50px;
