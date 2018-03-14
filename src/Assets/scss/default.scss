@@ -273,13 +273,15 @@ footer{
 .signInForm{
   .formBox{
     border-radius: 15px;
-    width: 500px;
-    height: 350px;
+    width: 400px;
+    height: 500px;
     text-align: center;
     // todo: add transperency to bgrnd color
     background-color: #2c3933;
+    padding-top: 15px;
+    padding-bottom: 10px;
     margin: 0 auto;
-    margin-top: 150px;
+    margin-top: 100px;
   }
 
   // h2 references font on SIGN IN page
@@ -302,6 +304,8 @@ footer{
   button{
     // TODO: shrink button and change color;
     height: 45px;
+    padding-left: 10px;
+    padding-right: 10px;
     border-radius: 4px; // round corners = nice!
     border: none;
     background-color: rgb(28,74,147);
@@ -320,11 +324,13 @@ footer{
 .signUpForm{
   .formBox{
     border-radius: 15px;
-    width: 500px;
+    width: 400px;
     height: 500px;
     text-align: center;
     // todo: add transperency to bgrnd color
     background-color: #2c3933;
+    padding-top: 15px;
+    padding-bottom: 10px;
     margin: 0 auto;
     margin-top: 150px;
   }
@@ -349,6 +355,8 @@ footer{
   button{
     // TODO: shrink button and change color;
     height: 45px;
+    padding-left: 10px;
+    padding-right: 10px;
     border-radius: 4px; // round corners = nice!
     border: none;
     background-color: rgb(28,74,147);
