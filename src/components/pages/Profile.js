@@ -1,12 +1,53 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { firebase, db } from '../../firebase/index';
+import { firebase, db, auth } from '../../firebase/index';
 import withAuthorization from '../../withAuthorization';
 
 
+class Profile extends Component{
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      user: {}
+    };
+  }
+
+  componentDidMount() {
+    db.onceGetUsers().then(snapshot =>
+      this.setState(() => ({ user: snapshot.val() }))
+    );  
+  }
+
+
+  render(){ 
+    const{ user } = this.state;
+
+    return(
+      <div>
+        <h1> Profile </h1>
+        { !! user && <UserList user = {user} /> }
+      </div>
+    );
+  }
+}
+
+
+const UserList = ({ user }) =>
+  <div>
+    {Object.keys(user).map(key =>
+      <div key={key}>{user[key].username}</div>
+    )}
+  </div>
 
 
 
+const authCondition = (authUser) => !!authUser;
+
+export default withAuthorization(authCondition)(Profile);
+
+
+/*
 const Profile = (props, { authUser }) =>
   
   //  db.ref('users/' + authUser.uid + '/email').once('value');
@@ -30,9 +71,6 @@ Profile.contextTypes = {
 
 
 
-const authCondition = (authUser) => !!authUser;
-
-export default withAuthorization(authCondition)(Profile);
 
 
 
@@ -91,4 +129,4 @@ const UserNam = ({ user }) =>
     ...
   }
 }
-*/}
+*/
