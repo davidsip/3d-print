@@ -32,6 +32,7 @@ $npm install gulp -D
 &nbsp;
 
 $touch gulpfile.js
+(if you cloned the repo, you do not need to do touch gulpfile.js, it should already be included)
 
 to understand it 
 &nbsp;
