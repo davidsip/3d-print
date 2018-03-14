@@ -9,8 +9,8 @@ export const doCreateUser = (id, username, email) =>
 export const onceGetUsers = () =>
   db.ref('users').once('value');
 
-export const doCreateElement = (productname,designer,price,description,picture) =>
- db.ref(`users/${designer}/${productname}`).set({
+export const doCreateElement = (id,productname,price,description,picture) =>
+ db.ref(`users/${id}/elements/${productname}`).set({
      price,
      description,
      picture,
