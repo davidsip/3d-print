@@ -57,8 +57,16 @@ const HeaderWithAuth = () =>
             <li className="first">
               <Link to="/">Home</Link>
             </li>
+            {
+              /*
+              <li>
+                <Link to="/Products">Designs</Link>
+              </li>
+              */
+            }
+
             <li>
-              <Link to="/Designs">Designs</Link>
+              <Link to="/temp">Designs</Link>
             </li>
             <li className = "dropdown-parent">
               <Link to="/Profile">Profile</Link>
@@ -115,7 +123,7 @@ const HeaderNonAuth = () =>
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/Designs">Designs</Link>
+              <Link to="/temp">Designs</Link>
             </li>
             <li className="sIn">
               <Link to="/SignIn">Sign In</Link>
@@ -126,4 +134,3 @@ const HeaderNonAuth = () =>
       </header>
 
 export default Header;
-

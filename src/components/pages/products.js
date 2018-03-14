@@ -11,7 +11,7 @@ import {Productframe} from './framework/productframe';
       }
   componentDidMount() {
       db.onceGetUsers()
-          .then(snapshot => 
+          .then(snapshot =>
                 this.setState(() => ( {users: snapshot.val() }))
                 );
   }
@@ -21,10 +21,11 @@ import {Productframe} from './framework/productframe';
         <div className = "container-fluid">
         <h1>Products</h1>
         { !!users && <ItemList users={users} /> }
-        </div>
+
+      </div>
     );
   }
-      
+
 }
 
 

@@ -19,11 +19,12 @@ import SignIn   from './components/pages/SignIn';
 import SignUp   from './components/pages/SignUp';
 import SignOut  from './components/pages/SignOut';
 import Profile  from './components/pages/Profile';
+import TempDesigns  from './components/pages/tempdesigns';
 import withAuthentication from './withAuthentication';
 //import Time from './components/headerComponent/time';
 
 // rewrite App as a const arrow functions
-// App will act as our router only and 
+// App will act as our router only and
 // other components will handle protected paths
 const App = () =>
   <Router>
@@ -37,6 +38,7 @@ const App = () =>
           <Route exact path='/SignIn/SignUp' component={SignUp}/>
           <Route exact path='/SignOut' component={SignOut}/>
           <Route exact path='/Profile' component={Profile} />
+          <Route exact path='/temp' component={TempDesigns} />
         <Footer/>
       </div>
 
@@ -44,4 +46,3 @@ const App = () =>
     </Router>
 
 export default withAuthentication(App);
-
