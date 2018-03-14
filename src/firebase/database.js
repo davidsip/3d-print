@@ -14,4 +14,4 @@ export const doCreateElement = (id,productname,price,description,picture) =>
      price,
      description,
      picture,
- })
+ });
