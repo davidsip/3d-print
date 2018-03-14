@@ -203,14 +203,16 @@ h3{
 
   .black:checked ~ .boxes > .black,
   .red:checked ~ .boxes > .red,
-  .yellow:checked ~ .boxes > .yellow
+  .yellow:checked ~ .boxes > .yellow,
+  .green:checked ~ .boxes > .green
   {
     opacity: 1;
   }
 
 .black:checked ~ .labels > .b-label,
 .red:checked ~ .labels > .r-label,
-.yellow:checked ~ .labels > .y-label
+.yellow:checked ~ .labels > .y-label,
+.green:checked ~ .labels > .g-label
 {
   background-color: #000000;
 }

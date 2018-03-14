@@ -39,6 +39,7 @@ class Homepage extends Component {
               <input type="radio" class="rnav black" id="slide_1" defaultChecked name="coins"/>
               <input type="radio" class="rnav red" id="slide_2" name="coins"/>
               <input type="radio" class="rnav yellow" id="slide_3" name="coins"/>
+              <input type="radio" class="rnav green" id="slide_4" name="coins"/>
 
               <div class="boxes">
                   <div class="box black">
@@ -50,12 +51,16 @@ class Homepage extends Component {
                   <div class="box yellow">
                       <img src={require('./aa.jpg')} alt=""/>
                   </div>
+                  <div class="box green">
+                      <img src={require('./todd.jpg')} alt=""/>
+                  </div>
               </div>
 
               <div class="labels">
                   <label for="slide_1" class="s-index b-label"></label>
                   <label for="slide_2" class="s-index r-label"></label>
                   <label for="slide_3" class="s-index y-label"></label>
+                  <label for="slide_4" class="s-index g-label"></label>
               </div>
           </div>
 
