@@ -1,8 +1,25 @@
 import React, { Component } from 'react';
+import { db } from '../../firebase/index';
+import withAuthorization from '../../withAuthorization';
+
 import axios from 'axios';
 
 class Homepage extends Component {
-  state = {
+  constructor(props){
+    super(props);
+    this.state = {
+      //selectedFile: null
+      user: {}
+    };
+  }
+
+  componentDidMount() {
+      db.onceGetUsers().then(snapshot =>
+        this.setState(() => ({ user: snapshot.val() })) 
+      );
+  }
+
+  /*state = {
     selectedFile: null
   }
 
@@ -16,9 +33,12 @@ class Homepage extends Component {
     const fd = new FormData();
     fd.append('image', this.state.selectedFile, this.state.selectedFile.name);
     axios.post('gs://printer-1c171.appspot.com', fd);
-  }
+  */
+  
   render() {
+    const{ user } = this.state;
     return (
+
       <div className="container-fluid">
 
       <h1>
@@ -38,8 +58,11 @@ class Homepage extends Component {
     
         </div>
 
-          <input type="file" onChange={this.fileSelectedHandler}/>
+          {/*<input type="file" onChange={this.fileSelectedHandler}/>
           <button onClick={this.fileUploadHandler}>Upload</button>
+          */}
+
+          { !!user && <UserNam user={user} /> }
       </div>
 
     );
@@ -48,4 +71,17 @@ class Homepage extends Component {
 
 }
 
-export default Homepage;
+const UserNam = ({ user }) =>
+  <div>
+    <h2>List of Usernames of Users</h2>
+    <p>(Saved on Sign Up in Firebase Database)</p>
+    
+    {Object.keys(user).map(key =>
+      <div key={key}>{user[key].username}</div>
+    )} 
+  </div>
+
+const authCondition = (authUser) => !!authUser;
+
+
+export default withAuthorization(authCondition)(Homepage);

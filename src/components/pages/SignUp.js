@@ -53,6 +53,7 @@ class SignUpForm extends Component{
     auth.doCreateUserWithEmailAndPassword(email, passwordOne)
       .then(authUser => {
 
+        // all within then
         // Create user in our db
         db.doCreateUser(authUser.uid, username, email)
           .then(() => {        

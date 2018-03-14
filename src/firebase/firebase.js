@@ -8,11 +8,10 @@ const config={
     storageBucket: "printer-1c171.appspot.com",
     messagingSenderId: "198617925096"
 };
-// is this getting called
+
 
 if (!firebase.apps.length){
   firebase.initializeApp(config);
-  console.log('init?');
 }
 
 
