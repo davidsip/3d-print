@@ -3,17 +3,17 @@ import {db} from '../../firebase';
 import {Productframe} from './framework/productframe';
   class Products extends Component {
   componentDidMount() {
-      db.onceGetElements()
+      db.onceGetUsers()
           .then(snapshot => 
-                this.setState(() => ({elements: snapshot.val()}))
+                this.setState(() => ({users: snapshot.val()}))
                 );
   }
   render() {
-      const { elements } = this.state;
+      const { users } = this.state;
     return (
         <div>
         <h1>Products</h1>
-        { !!elements && <ItemList elements={elements} /> }
+        { !!users && <ItemList users={users} /> }
         </div>
     );
   }

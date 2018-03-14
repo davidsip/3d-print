@@ -1,12 +1,12 @@
 import * as firebase from 'firebase';
 
 const config={
-    apiKey: " see console ",
-    authDomain: " see console ",
-    databaseURL: " see console ",
-    projectId: " see console ",
-    storageBucket: " see console ",
-    messagingSenderId: " see console ",
+    apiKey: "AIzaSyD8uoLEajmdN8rw8EDoIKggOHSDAJg8YXg",
+    authDomain: "printer-1c171.firebaseapp.com",
+    databaseURL: "https://printer-1c171.firebaseio.com",
+    projectId: "printer-1c171",
+    storageBucket: "printer-1c171.appspot.com",
+    messagingSenderId: "198617925096",
 };
 // is this getting called
 
