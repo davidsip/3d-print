@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import {database} from '../../firebase';
+import {db} from '../../firebase';
 import {Productframe} from './framework/productframe';
   class Products extends Component {
   componentDidMount() {
-      database.onceGetElements()
+      db.onceGetElements()
           .then(snapshot => 
                 this.setState(() => ({elements: snapshot.val()}))
                 );
