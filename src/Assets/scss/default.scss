@@ -173,7 +173,7 @@ h3{
          height: inherit;
        }
      }
-     .box {
+     .box black{
          width: 100%;
          position: absolute;
          top: 100;
@@ -181,6 +181,31 @@ h3{
          opacity: 0;
          transition: opacity 1.5s ease-in-out;
        }
+      .box red{
+         width: 100%;
+         position: absolute;
+         top: 100;
+         left: 0;
+         opacity: 0;
+         transition: opacity 1.5s ease-in-out;
+       }
+      .box yellow{
+         width: 100%;
+         position: absolute;
+         top: 100;
+         left: 0;
+         opacity: 0;
+         transition: opacity 1.5s ease-in-out;
+       }
+      .box green{
+        width: 80px;
+        height: 150px;
+        position: absolute;
+        top: 100;
+        left: 0;
+        opacity: 0;
+        transition: opacity 1.5s ease-in-out;
+      }
      .labels {
        margin-top: 10px;
        display: inline-block;
@@ -211,7 +236,7 @@ h3{
 
 .black:checked ~ .labels > .b-label,
 .red:checked ~ .labels > .r-label,
-.yellow:checked ~ .labels > .y-label,
+.yellow:checked ~ .labels > .y-label
 .green:checked ~ .labels > .g-label
 {
   background-color: #000000;
