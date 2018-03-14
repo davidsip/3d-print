@@ -32,9 +32,8 @@ class Homepage extends Component {
             to empower surfers and local communities.
             </p>
             </div>
-    
-        </div>
 
+            
           <div class ="wrap">
 
               <input type="radio" class="rnav black" id="slide_1" name="coins"/>
@@ -59,6 +58,9 @@ class Homepage extends Component {
                   <label for="slide_3" class="s-index y-label"></label>
               </div>
           </div>
+    
+        </div>
+
 
           
 
