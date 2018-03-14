@@ -1,9 +1,5 @@
 //inbetween imports from database and button needs an onclick
 import React, { Component } from 'react';
-import {
-  Link,
-  withRouter,
-} from 'react-router-dom';
     
     const INITIAL_STATE = {
     productname: '',
@@ -11,7 +7,6 @@ import {
     description: '',
     price: '',
     picture: null,
-    error: null,
   };
 
 class Productframe extends Component{
@@ -28,39 +23,28 @@ class Productframe extends Component{
         description,
         price,
         picture,
-        error,
       } = this.state;
         return(
             <div classname="designlayout">
             <p>Product Name:</p> 
             <div classname="content">
-                <input
-                    value ={productname}
-                    type = "text"
-                /> 
+                {productname}
             </div>
             <p>Designer:</p><div classname="content">
-                <input
-                    value ={designer}
-                    type = "text"
-                /> 
+                {designer}
             </div>
             <p>Description:</p><div classname="content">
-                <input
-                    value ={description}
-                    type = "text"
-                /> 
+                {description}
             </div>
             <p>Price: $</p><div classname="content">
-                <input
-                    value ={price}
-                    type = "text"
-                /> 
-            </div>
+                {price}
             <button type="button">Price</button>
-            <img src = {picture} alt="Image"></img>
+                </div>
+            <div classname="content">    
+                <img src = {picture} alt = "Failed to Load"></img>
+            </div>
             </div>
         );
     }
 }
-export default Productframe;
+export {Productframe};
